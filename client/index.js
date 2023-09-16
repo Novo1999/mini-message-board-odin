@@ -47,7 +47,7 @@ const getAllMessage = async () => {
 };
 
 const postNewMessage = async () => {
-  //   if (!nameInputValue || !messageInputValue) return;
+  if (!nameInput.value || !messageInput.value) return;
   try {
     await axios.post("/home/new", {
       name: nameInput.value,
