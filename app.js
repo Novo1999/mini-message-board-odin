@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static("./client"));
-app.use("/", router);
+app.use("/home", router);
 
 const start = async () => {
   try {

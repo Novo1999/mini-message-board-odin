@@ -11,10 +11,10 @@ const getMessages = asyncWrapper(async (req, res) => {
 
 const newMessage = asyncWrapper(async (req, res) => {
   const message = await messages.create(req.body);
+  console.log(req.body);
   if (!messages) {
     return res.status(404).json({ msg: "No name or message" });
   }
-  if (message) return res.redirect("/");
   return res.status(201).json({ message });
 });
 
