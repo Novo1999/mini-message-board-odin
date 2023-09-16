@@ -14,6 +14,7 @@ const newMessage = asyncWrapper(async (req, res) => {
   if (!messages) {
     return res.status(404).json({ msg: "No name or message" });
   }
+  if (message) return res.redirect("/");
   return res.status(201).json({ message });
 });
 

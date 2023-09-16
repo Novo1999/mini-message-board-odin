@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✉</text></svg>"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="d-flex align-items-center flex-column">
+    <div class="bg-white text-center p-4 w-100 header">
+      <h1>Messages</h1>
+    </div>
+    <div class="bg-white rounded-3 mt-5 message-container position-relative">
+      <div class="w-100 bg-dark text-dark rounded-top-2">.</div>
+      <div class="messages-message d-flex align-items-center gap-3 p-4">
+        <div class="d-flex align-items-center flex-column position-relative">
+          <div class="position-absolute top-100 d-flex gap-4 start-0">
+            <p>name</p>
+            <p>at:</p>
+          </div>
+          <img class="user-img" src="./user.png" alt="user" />
+        </div>
+        <p class="bg-warning p-3 msg rounded-5">Message</p>
+      </div>
+      <div
+        class="mb-3 position-absolute bottom-0 align-items-center d-flex gap-4"
+      >
+        <div>
+          <input
+            type="text"
+            class="input"
+            id="new-message"
+            placeholder="New Message"
+          />
+        </div>
+        <button class="btn btn-success" type="submit">Send</button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script type="module" src="index.js"></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Styles -->
+    <style>
+      .header {
+        box-shadow: 0px 0px 10px 5px;
+      }
+      .message-container {
+        height: 50rem;
+        width: 50rem;
+        box-shadow: 1px 2px 10px 1px;
+      }
+      .user-img {
+        width: 50px;
+        height: 50px;
+      }
+      .msg {
+        margin-bottom: 0;
+      }
+      body {
+        background-color: #3eecac;
+        background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+        height: 100vh;
+      }
+      .input {
+        width: 40rem;
+        margin-left: 3rem;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .btn-success {
+        height: 2.8rem;
+      }
+    </style>
+  </body>
+</html>
